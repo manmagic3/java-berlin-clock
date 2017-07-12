@@ -1,7 +1,10 @@
-package com.ubs.opsit.interviews;
+package com.ubs.opsit.interviews.timeunit;
+
+import com.ubs.opsit.interviews.model.LampColor;
 
 public interface TimeUnit {
 	
+	public static final String DELIMITER="\r\n";
 	
 	public default String switchOnLampsAsPerTime(int numOfLamps,
 												 int numOfOnLamps,

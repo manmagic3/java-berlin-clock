@@ -2,6 +2,10 @@ package com.ubs.opsit.interviews;
 
 import java.util.Arrays;
 
+import com.ubs.opsit.interviews.timeunit.HoursTimeUnit;
+import com.ubs.opsit.interviews.timeunit.MinutestTimeUnit;
+import com.ubs.opsit.interviews.timeunit.SecondTimeUnit;
+
 
 
 public class BerlinWatchTimeConverter implements TimeConverter {
@@ -18,8 +22,8 @@ public class BerlinWatchTimeConverter implements TimeConverter {
 		
 		StringBuilder berlinWatchTime = new StringBuilder();
 		
-		berlinWatchTime.append(new SecondTimeUnit().getConvertedTime(timeArray[2])).append("\r\n")
-						.append(new HoursTimeUnit().getConvertedTime(timeArray[0])).append("\r\n")
+		berlinWatchTime.append(new SecondTimeUnit().getConvertedTime(timeArray[2]))
+						.append(new HoursTimeUnit().getConvertedTime(timeArray[0]))
 						.append(new MinutestTimeUnit().getConvertedTime(timeArray[1]));
 		
 		

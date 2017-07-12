@@ -1,4 +1,7 @@
-package com.ubs.opsit.interviews;
+package com.ubs.opsit.interviews.timeunit;
+
+import com.ubs.opsit.interviews.model.LampColor;
+import com.ubs.opsit.interviews.util.BerlinWatchUtility;
 
 public class MinutestTimeUnit implements TimeUnit {
 	
@@ -16,7 +19,9 @@ public class MinutestTimeUnit implements TimeUnit {
 				BerlinWatchUtility.getBerlinWatchUtility().getTotalNumberOfOnLampsforBottomRow(timeUnit),
 						LampColor.YELLOW); 
 
-		return topRowHoursTime + "\r\n" + bottomRowHoursTime ;
+		return new StringBuilder().append(topRowHoursTime)
+								  .append(DELIMITER)
+								  .append(bottomRowHoursTime).toString() ;
 		
 		
 	}
